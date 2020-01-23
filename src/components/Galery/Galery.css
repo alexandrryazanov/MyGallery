@@ -1,0 +1,26 @@
+.galery {
+    width: 650px;
+    height: 440px;
+    display: block;
+    border-radius: 5px;
+    box-shadow: 10px 10px 10px #333333;
+    background-color: lightyellow;
+    padding:20px;
+}
+
+ul {
+    margin: 0px;
+    padding: 0px;
+    height: 100%;
+    list-style-type: none;
+    display: flex;
+    align-items: baseline;
+    overflow-y: scroll;
+    flex-wrap: wrap;
+    cursor: pointer;
+}
+
+li {
+    width: 155px;
+    height: 155px;
+}
