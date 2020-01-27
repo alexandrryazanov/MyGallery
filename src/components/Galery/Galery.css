@@ -1,5 +1,5 @@
 .galery {
-    width: 650px;
+    width: 640px;
     height: 440px;
     display: block;
     border-radius: 5px;
@@ -11,16 +11,20 @@
 ul {
     margin: 0px;
     padding: 0px;
-    height: 100%;
+    height:100%;
     list-style-type: none;
-    display: flex;
-    align-items: baseline;
-    overflow-y: scroll;
-    flex-wrap: wrap;
-    cursor: pointer;
+    display: block; /*было flex*/
+    align-items: flex-start;
+    overflow-y: auto;
+    text-align: left;
+    line-height: 0;
+    user-select: none;
 }
 
 li {
-    width: 155px;
-    height: 155px;
+    display: inline-block;
+    max-width: 150px;
+    max-height: 150px;
+    margin: 2px;
+    text-align: center;
 }

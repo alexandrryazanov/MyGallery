@@ -1,0 +1,40 @@
+.menu {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    bottom: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 120px;
+    height: 25px;
+    background-color: rgba(0,0,0,.7);
+    z-index: 100;
+}
+
+.icon {
+    cursor: pointer;
+}
+
+.icon:hover {
+    transform: scale(1.09);
+}
+
+.addtoalbum {
+    color:white;
+    font-size: 30px;
+    font-weight: lighter;
+    margin: 5px;
+    margin-top: 10px;
+}
+
+.delete {
+    color:white;
+    font-size: 20px;
+    margin: 5px;
+    margin-top: 5px;
+}
+
+.delete img {
+    filter: invert(1);
+    height: 16px;
+}

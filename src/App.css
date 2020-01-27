@@ -13,7 +13,7 @@
   }
 }
 
-.App-header {
+header {
   background-color: #282c34;
   min-height: 50px;
   display: flex;
@@ -38,7 +38,28 @@
 }
 
 .main {
-  margin-top: 40px;
+  margin: 0 auto;
+  width: 700px;
+  margin-top: 10px;
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
+}
+
+nav {
+  left: 10px;
+  position: relative;
+  display: block;
+  text-align: left;
+  width: 100%;
+
+  color:white;
+  font-size: 22px;
+  margin-bottom: 5px;
+  user-select: none;
+}
+
+.arrow {
+  cursor: pointer;
+  margin-right: 10px;
 }
