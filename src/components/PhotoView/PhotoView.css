@@ -18,6 +18,7 @@
   height: 700px;
   display: block;
   user-select: none;
+  animation: showScale 1 .2s linear;
 }
 
 .photoview img {

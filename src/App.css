@@ -37,6 +37,44 @@ header {
   }
 }
 
+@keyframes showMain {
+  from {
+    transform: translate(0,350px);
+  }
+
+  35% {
+    transform: translate(400px,125px) scale(.3) ;
+  }
+
+  65% {
+    transform: translate(300px,-50px) scale(.6) ;
+  }
+
+  to {
+    transform: translate(0,0);
+  }
+}
+
+@keyframes showScale {
+  from {
+      transform: scale(.1);
+  }
+
+  to {
+      transform: scale(1);
+  }
+}
+
+@keyframes showSlide {
+  from {
+      transform: translate(-300px,0);
+  }
+
+  to {
+      transform: translate(0,0);
+  }
+}
+
 .main {
   margin: 0 auto;
   width: 700px;
@@ -44,6 +82,7 @@ header {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  animation: showMain 1 .7s linear;
 }
 
 nav {

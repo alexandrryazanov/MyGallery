@@ -1,3 +1,6 @@
+
+
+
 .photopreview {
     width: 150px;
     height: 150px;
@@ -6,6 +9,7 @@
     justify-content: center;
     align-items: center;
     margin: 0px;   
+    animation: showScale 1 .2s linear;
 }
 
 .photopreview>img {

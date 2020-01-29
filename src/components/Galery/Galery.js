@@ -3,6 +3,7 @@ import './Galery.css'
 
 import PhotoPreview from './../PhotoPreview/PhotoPreview.js'
 import AlbumPreview from './../AlbumPreview/AlbumPreview.js'
+import { photosFromAlbum } from './../../startPhotos'
 
 
 export default function Galery(props) {
@@ -36,10 +37,15 @@ function ShowMode(props) {
         //--показываем список альбомов
         return (
             props.albumsArray.map((value,index)=>
-                <li onClick={()=>props.setAlbumFunc(value.name)} key={index}>
+                <li 
+                    key={index}
+                    onClick={()=>{
+                        props.setAlbumFunc(value.name);
+                    }} 
+                >
                     <AlbumPreview  
-                        name={value.name + ' (' + getAlbumData(value.name,props.photoArray).count + ')'} 
-                        coverUrl={getAlbumData(value.name,props.photoArray).coverUrl}
+                        name={value.name + ' (' + getAlbumData(value.name).count + ')'} 
+                        coverUrl={getAlbumData(value.name,props).coverUrl}
                     />
                 </li>
             )
@@ -47,10 +53,10 @@ function ShowMode(props) {
     }
 }
 
-function getAlbumData(albumName, photoArray) {
+function getAlbumData(albumName) {
     var coverUrl='';
     var count=0;
-    photoArray.forEach(p_value=>
+    photosFromAlbum('').forEach(p_value=>
         p_value.albums.forEach(a_value=>{
             if(a_value===albumName) {coverUrl=p_value.url;count++;}
         })

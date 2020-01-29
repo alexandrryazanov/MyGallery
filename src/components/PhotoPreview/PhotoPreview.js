@@ -14,8 +14,6 @@ export default function PhotoPreview(props) {
     ];
 
     function popupYesHandler() {
-        //--Удаляем элемент массива 
-        //--При возврате назад, все как было (ИСПРАВИТЬ!!!)
         const newPhotoArray = props.photoArray.concat([]);
         newPhotoArray.splice(props.index,1);
         props.setPhotoArray(newPhotoArray);

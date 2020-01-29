@@ -90,11 +90,9 @@ const albums = [
 
 
 function photosFromAlbum(albumName, photoArray) {
-    console.log("новый массив");
-    console.log(photoArray);
     if(photoArray===undefined) photoArray=startPhotos;
     if(albumName==='') return photoArray;
-    return photoArray.filter(value=>value.albums.includes(albumName));
+    return startPhotos.filter(value=>value.albums.includes(albumName));
 }
 
 export { photosFromAlbum, albums }
